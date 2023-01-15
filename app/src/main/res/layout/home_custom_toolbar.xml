@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/button"
+    android:layout_height="90dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="90dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:src="@drawable/ic_baseline_drag_handle_24"
+            android:layout_centerVertical="true"
+            android:id="@+id/backbtn"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_height="35dp"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="Manage Item"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:id="@+id/manageItem"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:padding="5dp"
+        android:id="@+id/btnLogout"
+        android:background="@drawable/log_out_btn_shape"
+        android:layout_height="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/logoutTextColor"
+            android:text="@string/logout"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

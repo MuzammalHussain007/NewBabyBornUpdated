@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "304098696784",
+    "project_id": "newbabyborn-ff1b9",
+    "storage_bucket": "newbabyborn-ff1b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304098696784:android:3bf3dfccb4b3262dabfb55",
+        "android_client_info": {
+          "package_name": "com.example.newbabyborn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304098696784-d2kpm71vovtmojsto9luf6aiu66cir9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHiuRthddr0tSt6J7LypM8Ll05VUgi9h8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304098696784-d2kpm71vovtmojsto9luf6aiu66cir9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

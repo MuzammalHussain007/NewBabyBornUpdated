@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.activity.SignUpActivity">
+
+    <include
+        layout="@layout/custom_toolbar"
+        android:id="@+id/loginToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_below="@+id/loginToolbar"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center|top"
+            android:layout_marginTop="70dp"
+            android:layout_weight="0.3">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="90dp"
+                android:src="@drawable/splashscreen"
+                android:layout_gravity=""
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/textAndAddColor"
+                android:text="@string/login_account"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/textAndAddColor"
+                android:text="@string/email"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/et_shape"
+                android:id="@+id/et_email_login"
+                android:layout_marginStart="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/textAndAddColor"
+                android:text="@string/password"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="10dp"
+                android:inputType="text"
+                android:background="@drawable/et_shape"
+                android:id="@+id/et_password_login"
+                android:layout_marginEnd="10dp"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:textAllCaps="false"
+                android:id="@+id/btnLogin"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_shape"
+                android:layout_marginEnd="10dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/signupBTN"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/textAndAddColor"
+                    android:text="@string/donothaveaccount"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/signupTextView"
+                    android:textColor="@color/button"
+                    android:text="@string/sign_up"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

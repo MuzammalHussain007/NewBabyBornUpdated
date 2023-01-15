@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:background="@drawable/home_shape"
+    android:layout_height="50dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_Title"
+        android:text="Baby Wipes"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:id="@+id/custom_edit"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_edit_24"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:id="@+id/custom_share"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_share_24"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:id="@+id/custom_location"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_location_on_24"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_Price"
+            android:text="$20"
+
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            tools:ignore="RtlCompat" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>
