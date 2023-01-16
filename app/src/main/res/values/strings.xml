@@ -31,4 +31,13 @@
     <string name="passwordnotmatch">Password Does not match</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description</string>
+
+
+    <string-array name="user_gender_array">
+        <item>Select Item Type</item>
+        <item>Feeding</item>
+        <item>Cloth</item>
+        <item>Hygiene</item>
+    </string-array>
 </resources>

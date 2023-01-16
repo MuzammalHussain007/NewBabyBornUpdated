@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddItemActivity">
+
+    <include layout="@layout/custom_toolbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/itemimage"
+        android:scaleType="fitXY"
+        android:layout_height="180dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name"
+        android:layout_marginTop="5dp"
+        android:id="@+id/itemName"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Price"
+        android:layout_marginTop="5dp"
+        android:id="@+id/itemPrice"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Description"
+        android:layout_marginTop="5dp"
+        android:id="@+id/itemDescription"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Quantity"
+        android:inputType="number"
+        android:layout_marginTop="5dp"
+        android:id="@+id/Quantity"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Location"
+        android:layout_marginTop="5dp"
+        android:id="@+id/Location"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Type"
+        android:layout_marginTop="5dp"
+        android:id="@+id/type"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/addItem"
+        android:text="Add Item"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"/>
+
+</LinearLayout>

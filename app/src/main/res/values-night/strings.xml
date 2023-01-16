@@ -28,5 +28,14 @@
     <string name="passwordisnotempty">Password is not Empty</string>
     <string name="cnfrmpasswordpasswordisnotempty">Confirm Password is not empty</string>
     <string name="passwordnotmatch">Password Does not match</string>
+    <string name="description">Description</string>
+
+
+    <string-array name="user_gender_array">
+        <item>Select Item Type</item>
+        <item>Feeding</item>
+        <item>Cloth</item>
+        <item>Hygiene</item>
+    </string-array>
 
 </resources>
