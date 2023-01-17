@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newbabyborn.adapter.BabayItemAdapter
 import com.example.newbabyborn.databinding.FragmentClothBinding
-import com.example.newbabyborn.fragment.activity.AddItemsActivity
+import com.example.newbabyborn.fragment.activity.ItemsDetailActivity
 import com.example.newbabyborn.modal.Item
 import com.google.firebase.database.*
 
@@ -91,9 +91,7 @@ class ClothFragment : Fragment() {
 
     private fun addItem(position : Int)
     {
-        val intent = Intent(requireActivity(), AddItemsActivity::class.java)
-        intent.putExtra("data",itemList[position])
-        requireActivity().startActivity(intent)
+
     }
 
     private fun shareItem(position : Int)

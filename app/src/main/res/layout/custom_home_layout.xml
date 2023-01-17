@@ -9,17 +9,40 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="50dp">
-
-    <TextView
-        android:layout_gravity="center"
-        android:layout_marginStart="5dp"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/custom_Title"
-        android:text="Baby Wipes"
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:layout_centerVertical="true"/>
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_Title"
+            android:text="Baby Wipes"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_quantity"
+            android:text="3 items"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"/>
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"

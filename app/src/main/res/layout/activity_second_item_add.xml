@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.activity.SecondItemAddActivity">
+    tools:context=".fragment.activity.ItemAddActivity">
 
     <include layout="@layout/custom_toolbar"
         android:id="@+id/addToolbar"/>
@@ -13,10 +13,12 @@
         android:id="@+id/spinner_gender"
         android:layout_width="match_parent"
         android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_below="@+id/addToolbar"
         android:layout_marginTop="10dp"
         android:background="@drawable/et_shape"
-        android:layout_marginEnd="10dp"
+
         />
 
     <TextView
@@ -27,6 +29,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+
         android:textSize="20dp"
         android:textColor="@color/lightgray"
         android:text="Items"/>
@@ -50,8 +53,28 @@
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:id="@+id/itemRecyclarView"
         tools:listitem="@layout/custom_item_layout"
         android:layout_below="@+id/searchItem"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Item Found"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/lightgray"
+        android:id="@+id/noItemFound"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
 
 
 </RelativeLayout>

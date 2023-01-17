@@ -13,7 +13,7 @@
         android:theme="@style/Theme.NewBabyBorn"
         tools:targetApi="31">
         <activity
-            android:name=".fragment.activity.SecondItemAddActivity"
+            android:name=".fragment.activity.ItemAddActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -27,7 +27,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".fragment.activity.AddItemsActivity"
+            android:name=".fragment.activity.ItemsDetailActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -2,14 +2,16 @@ package com.example.newbabyborn.fragment.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.example.newbabyborn.R
 import com.example.newbabyborn.databinding.ActivityAddItemsBinding
-import com.example.newbabyborn.databinding.ActivitySignUpBinding
 import com.example.newbabyborn.modal.Item
 
-class AddItemsActivity : AppCompatActivity() {
+class ItemsDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddItemsBinding
+    private var quantity: Int = 0
+    private var variableQuantity: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddItemsBinding.inflate(layoutInflater)
@@ -19,10 +21,26 @@ class AddItemsActivity : AppCompatActivity() {
     }
 
     private fun innit() {
+
         binding.addToolbar.backbtn.setOnClickListener {
             finish()
         }
-        binding.addToolbar.btnTxt.text = "Item"
+        binding.btnPositive.setOnClickListener {
+            quantity += 1
+            variableQuantity += quantity
+            binding.itemCount.text = variableQuantity.toString()
+            quantity = 0
+
+        }
+        binding.btnNegative.setOnClickListener {
+            quantity -= 1
+            variableQuantity -= quantity
+            Log.d("str_______",""+variableQuantity)
+//            binding.itemCount.text = variableQuantity.toString()
+            quantity=0
+
+        }
+        binding.addToolbar.btnTxt.text = "Add items"
         try {
             val item = intent.getSerializableExtra("data") as? Item
 
@@ -33,9 +51,10 @@ class AddItemsActivity : AppCompatActivity() {
             binding.itemCount.text = item.itemQuantity.toString()
             binding.itemLocation.text = item.itemLocation.toString()
 
+            variableQuantity = item.itemQuantity.toInt()
 
-        }catch (e : Exception)
-        {
+
+        } catch (e: Exception) {
             e.printStackTrace()
         }
 
