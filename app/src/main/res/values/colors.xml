@@ -14,6 +14,8 @@
     <color name="textAndAddColor">#4D5052</color>
     <color name="lightgray">#82898C</color>
     <color name="iconColor">#e28743</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#3DDC84</color>
 
     <color name="etcolor">#F5F5F5</color>
     <color name="button">#5CAFD4</color>

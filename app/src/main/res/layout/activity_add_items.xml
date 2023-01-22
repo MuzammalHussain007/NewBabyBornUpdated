@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/masterContainer"
@@ -10,9 +10,12 @@
 
     <include
         android:id="@+id/addToolbar"
-        layout="@layout/custom_toolbar" />
+        layout="@layout/custom_toolbar"
+        />
 
     <LinearLayout
+        android:id="@+id/layoutone"
+        android:layout_below="@+id/addToolbar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -26,6 +29,7 @@
 
             <ImageView
                 android:id="@+id/mainImage"
+                android:scaleType="fitXY"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/etcolor" />
@@ -55,6 +59,7 @@
                 android:layout_below="@+id/itemImage"
                 android:layout_centerInParent="true"
                 android:text="@string/image"
+                android:id="@+id/image"
                 android:textAlignment="center"
                 android:textColor="@color/textAndAddColor"
                 android:textSize="12sp"
@@ -107,6 +112,8 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_below="@+id/layoutone"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -136,10 +143,10 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/itemDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:id="@+id/itemDescription"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -159,6 +166,8 @@ aliquip ex ea commodo consequat."
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_below="@+id/layout2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -184,14 +193,14 @@ aliquip ex ea commodo consequat."
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <RelativeLayout
+                    android:id="@+id/btnNegative"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:id="@+id/btnNegative"
                     android:background="@drawable/quantity_shape">
 
                     <ImageView
@@ -230,9 +239,9 @@ aliquip ex ea commodo consequat."
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/btnPositive"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:id="@+id/btnPositive"
 
                     android:background="@drawable/quantity_shape">
 
@@ -257,6 +266,8 @@ aliquip ex ea commodo consequat."
     </LinearLayout>
 
     <LinearLayout
+        android:layout_below="@+id/layout3"
+        android:id="@+id/layout4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -280,13 +291,13 @@ aliquip ex ea commodo consequat."
                 tools:ignore="SmallSp" />
 
             <TextView
+                android:id="@+id/itemLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/full_address"
                 android:textAlignment="center"
-                android:id="@+id/itemLocation"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 tools:ignore="SmallSp" />
@@ -294,15 +305,15 @@ aliquip ex ea commodo consequat."
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="@string/pinlocation"
-
+                   android:id="@+id/pinLocation"
                     android:textAlignment="center"
                     android:textColor="@color/button"
                     android:textSize="12sp"
@@ -323,8 +334,8 @@ aliquip ex ea commodo consequat."
 
     </LinearLayout>
 
-
     <LinearLayout
+        android:id="@+id/layout5"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
@@ -333,6 +344,7 @@ aliquip ex ea commodo consequat."
         android:weightSum="2">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addItem"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
@@ -343,12 +355,32 @@ aliquip ex ea commodo consequat."
             android:text="@string/addBtn"
             android:textAllCaps="false"
             android:textColor="@color/white" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editItem"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_shape"
+            android:text="Edit Item"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
 
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+         />
 
-</LinearLayout>
+
+</RelativeLayout>
 
     
 

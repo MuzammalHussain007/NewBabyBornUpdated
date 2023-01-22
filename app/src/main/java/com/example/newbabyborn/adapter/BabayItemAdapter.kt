@@ -10,10 +10,10 @@ import com.example.newbabyborn.modal.Item
 class BabayItemAdapter(
     private val list: ArrayList<Item>,
     val context: Context,
-   val  addItem: (Int) -> Unit,
+    val addItem: (Int) -> Unit,
     val shareItem: (Int) -> Unit,
-   val  location: (Int) -> Unit
-) : RecyclerView.Adapter<BabayItemAdapter.ViewHolder>() {
+    val location: (Int) -> Unit,
+ ) : RecyclerView.Adapter<BabayItemAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: CustomHomeLayoutBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -25,13 +25,13 @@ class BabayItemAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        with(holder)
+         with(holder)
         {
             with(list[position])
             {
                 binding.customTitle.text = this.itemName
                 binding.customPrice.text ="$"+this.itemPrice
-                binding.customQuantity.text =this.itemQuantity+" item"
+                binding.customQuantity.text =this.quantityPurchasedByuser+" item"
 
                 binding.customEdit.setOnClickListener {
                     addItem(position)

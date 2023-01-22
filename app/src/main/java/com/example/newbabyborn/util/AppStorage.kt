@@ -14,16 +14,25 @@ object AppStorage {
         prefs = PreferenceManager.getDefaultSharedPreferences(context)
     }
 
-    fun getUser(): User {
-        val json: String = prefs.getString("user_model", "")!!
-        val obj: User = gson.fromJson(json, User::class.java)
-        return obj
+    fun getUser(): Boolean {
+        return prefs.getBoolean("user_model",false)
+
     }
 
-    fun setUser(user: User) {
-        val gson = Gson()
-        val json = gson.toJson(user)
-        prefs.edit().putString("user_model", json).apply()
+    fun setUser(type: Boolean) {
+        prefs.edit().putBoolean("user_model", type).apply()
+    }
+
+    fun getItemPosition(): Int {
+        return prefs.getInt("item",-1)
+
+    }
+
+    fun setItemPosition(type: Int) {
+        prefs.edit().putInt("item", type).apply()
+    }
+    fun clearPreference(){
+        prefs.edit().clear().apply()
     }
 
 }

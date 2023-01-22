@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FeedingFragment">
+    tools:context=".fragment.activity.CategoryDetailActivity">
+
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/customToolbarDetail"/>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/itemRecyclarView"
+        android:layout_below="@+id/customToolbarDetail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/clothingRecyclarView"
-        tools:listitem="@layout/custom_home_layout"/>
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
 
     <TextView
+        android:id="@+id/noItemFound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No Item Found"
-        android:textSize="20dp"
-        android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:text="No Item Found"
         android:textColor="@color/lightgray"
-        android:id="@+id/noItemFound"/>
+        android:textSize="20dp" />
 
     <ProgressBar
         android:layout_width="match_parent"
@@ -27,7 +35,5 @@
         android:id="@+id/progressbar"
         android:visibility="gone"
         android:layout_centerInParent="true"/>
-
-
 
 </RelativeLayout>

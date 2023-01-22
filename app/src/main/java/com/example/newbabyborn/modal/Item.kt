@@ -10,8 +10,10 @@ data class Item(
     val itemDescription: String = "",
     val itemLocation: String = "",
     val itemType: String = "",
-    val itemLangitude: String = "",
+    val itemLatitude: String = "",
     val itemLongitude: String = "",
-    val itemImage: String = ""
+    val itemImage: String = "",
+    val isPurchased: Boolean = false,
+    val quantityPurchasedByuser: String = "-1"
 ) : Serializable
 

@@ -92,7 +92,7 @@ class SignUpActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
-                    AppStorage.setUser(User(fullname,email,password))
+                    AppStorage.setUser(true)
                     binding.progressbar.visibility = View.GONE
                     startActivity(Intent(this, HomeActivity::class.java))
                     finish()

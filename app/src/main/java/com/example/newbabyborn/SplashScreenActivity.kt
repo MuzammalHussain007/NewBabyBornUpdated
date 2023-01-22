@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Toast
 import com.example.newbabyborn.fragment.activity.HomeActivity
 import com.example.newbabyborn.fragment.activity.LoginActivity
 import com.example.newbabyborn.util.AppStorage
@@ -17,19 +18,20 @@ class SplashScreenActivity : AppCompatActivity() {
         fullscreen()
         setContentView(R.layout.activity_main)
         AppStorage.init(this)
+        AppStorage.setItemPosition(0)
 
         addHandler()
     }
 
     private fun checkSession() {
-        if(AppStorage.getUser()!=null)
-        {
-            startActivity(Intent(this, HomeActivity::class.java))
+        if (AppStorage.getUser()) {
+            startActivity(Intent(this,HomeActivity::class.java))
             finish()
-        }else
-        {
-            startActivity(Intent(this, LoginActivity::class.java))
+
+        } else {
+            startActivity(Intent(this,LoginActivity::class.java))
             finish()
+
         }
 
     }
@@ -37,9 +39,9 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun addHandler() {
 
         Handler().postDelayed({
-          //  startActivity(Intent(this,AddItemsActivity::class.java))
+            //  startActivity(Intent(this,AddItemsActivity::class.java))
 
-              checkSession()
+            checkSession()
 
         }, Constant.SPLASH_TIMEOUT.toLong())
     }

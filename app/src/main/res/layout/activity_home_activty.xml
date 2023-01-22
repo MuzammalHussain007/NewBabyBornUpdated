@@ -21,116 +21,25 @@
             android:id="@+id/categoryText"
             android:textColor="@color/lightgray"/>
 
+
         <LinearLayout
+            android:id="@+id/category"
             android:layout_width="match_parent"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:id="@+id/category"
             android:layout_marginStart="15dp"
             android:layout_below="@+id/categoryText"
-            android:layout_height="150dp">
-             <LinearLayout
-                 android:layout_width="0dp"
-                 android:layout_weight="1"
-                 android:orientation="vertical"
-                 android:layout_height="wrap_content">
-                 <RelativeLayout
-                     android:id="@+id/feedingImage"
-                      android:layout_width="wrap_content"
-                     android:padding="5dp"
-                     android:layout_height="wrap_content">
+            android:layout_height="150dp"
+            android:orientation="horizontal">
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/categoryRecyclarView"
+                />
 
-                     <ImageView
-                         android:layout_width="100dp"
-                         android:layout_marginStart="10dp"
-                         android:layout_marginEnd="5dp"
-                         android:src="@drawable/r3"
-                         android:scaleType="fitXY"
-                         android:id="@+id/feeding"
-                         android:layout_gravity="center"
-                         android:layout_height="100dp"/>
-
-                 </RelativeLayout>
-
-                 <TextView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Feeding"
-                     android:layout_marginTop="5dp"
-                     android:gravity="center"
-                     android:layout_gravity="center"
-                     android:textColor="@color/lightgray"/>
-
-             </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-
-                <RelativeLayout
-                     android:layout_width="wrap_content"
-                    android:padding="5dp"
-                    android:id="@+id/clothingImage"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_gravity="center"
-                        android:id="@+id/clothing"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/r4"
-                        android:layout_height="100dp"/>
-
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Clothing"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="@color/lightgray"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:padding="5dp"
-                    android:id="@+id/hygieneImage"
-                     android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/r5"
-                        android:scaleType="fitXY"
-                        android:id="@+id/hygenie"
-                        android:layout_height="100dp"/>
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hygiene"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="@color/lightgray"/>
-
-            </LinearLayout>
 
         </LinearLayout>
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -181,22 +90,37 @@
 
     </RelativeLayout>
 
-
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_below="@+id/addItem"
-        android:id="@+id/masterContainer"
         android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/itemRecyclarView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/noItemFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="No Item Found"
+            android:textColor="@color/lightgray"
+            android:textSize="20dp" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressbar"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
 
 
-
-
-
-
-
-    </FrameLayout>
-
-
+    </RelativeLayout>
 
 
 </RelativeLayout>
